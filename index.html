@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="dashboard-wrapper">
+            <header class="py-3">
+                <div class="container-fluid">
+                    <div class="row align-items-center w-100">
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="me-2">
+                                    <img src="./images/logo.png"
+                                        alt="Inteelea Logo" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center gap-4">
+                                <div
+                                    class="notification-icon position-relative">
+
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M14.752 1.914C14.1917 2.68512 13.8519 3.59423 13.7691 4.5438C13.6863 5.49337 13.8635 6.44758 14.2818 7.30406C14.7001 8.16054 15.3438 8.88697 16.1436 9.40543C16.9434 9.92389 17.8693 10.2148 18.822 10.247V10.258C18.837 10.456 18.852 10.659 18.872 10.855C19.109 13.102 19.649 14.645 20.168 15.658C20.513 16.333 20.852 16.781 21.092 17.052C21.1973 17.1715 21.3109 17.2834 21.432 17.387L21.442 17.393C21.5703 17.4861 21.6658 17.6175 21.7148 17.7683C21.7638 17.9191 21.7637 18.0815 21.7146 18.2323C21.6655 18.383 21.5699 18.5143 21.4415 18.6074C21.3131 18.7004 21.1585 18.7503 21 18.75H2.99997C2.84177 18.7498 2.68768 18.6996 2.55974 18.6066C2.4318 18.5135 2.33655 18.3824 2.28763 18.232C2.2387 18.0815 2.2386 17.9195 2.28733 17.769C2.33607 17.6184 2.43114 17.4872 2.55897 17.394L2.56697 17.387L2.63097 17.333C2.69097 17.279 2.78797 17.188 2.90797 17.052C3.14797 16.782 3.48697 16.334 3.83197 15.659C4.52197 14.31 5.24997 12.03 5.24997 8.4C5.24997 6.519 5.94997 4.706 7.20997 3.362C8.47197 2.016 10.194 1.25 12 1.25C12.3826 1.25 12.7603 1.28367 13.133 1.351C13.371 1.394 14.151 1.637 14.752 1.914Z"
+                                            fill="white" />
+                                        <path fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M15.2499 5C15.2499 4.00544 15.645 3.05161 16.3483 2.34835C17.0515 1.64509 18.0054 1.25 18.9999 1.25C19.9945 1.25 20.9483 1.64509 21.6516 2.34835C22.3548 3.05161 22.7499 4.00544 22.7499 5C22.7499 5.99456 22.3548 6.94839 21.6516 7.65165C20.9483 8.35491 19.9945 8.75 18.9999 8.75C18.0054 8.75 17.0515 8.35491 16.3483 7.65165C15.645 6.94839 15.2499 5.99456 15.2499 5ZM9.89391 20.351C9.97914 20.3016 10.0733 20.2695 10.1709 20.2565C10.2685 20.2435 10.3678 20.2498 10.463 20.2752C10.5581 20.3005 10.6474 20.3444 10.7256 20.4042C10.8039 20.4641 10.8695 20.5388 10.9189 20.624C11.0288 20.8133 11.1865 20.9704 11.3762 21.0796C11.5659 21.1889 11.781 21.2464 11.9999 21.2464C12.2188 21.2464 12.4339 21.1889 12.6236 21.0796C12.8133 20.9704 12.971 20.8133 13.0809 20.624C13.1304 20.5388 13.1961 20.4641 13.2744 20.4043C13.3527 20.3445 13.442 20.3007 13.5372 20.2754C13.6325 20.2501 13.7317 20.2438 13.8294 20.2568C13.9271 20.2699 14.0212 20.3021 14.1064 20.3515C14.1916 20.4009 14.2663 20.4667 14.3261 20.545C14.3859 20.6233 14.4297 20.7126 14.4551 20.8078C14.4804 20.903 14.4867 21.0023 14.4736 21.1C14.4605 21.1976 14.4284 21.2918 14.3789 21.377C14.1372 21.7938 13.7902 22.1399 13.3727 22.3804C12.9552 22.6209 12.4818 22.7476 11.9999 22.7476C11.5181 22.7476 11.0447 22.6209 10.6271 22.3804C10.2096 22.1399 9.86262 21.7938 9.62091 21.377C9.57137 21.2917 9.53914 21.1975 9.52605 21.0998C9.51296 21.002 9.51927 20.9027 9.54463 20.8074C9.56998 20.7121 9.61389 20.6227 9.67382 20.5444C9.73376 20.4661 9.80855 20.4004 9.89391 20.351Z"
+                                            fill="#FF6200" />
+                                    </svg>
+
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="rounded-circle overflow-hidden"
+                                        style="width: 40px; height: 40px;">
+                                        <img src="./images/image.png"
+                                            alt="Profile"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <i
+                                        class="bi bi-chevron-down text-white-50"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Container -->
+            <div class="main-container">
+                <!-- Sidebar -->
+                <aside class="sidebar" id="sidebar">
+                    <div class="sidebar-header d-md-none">
+                        <button class="btn btn-close"
+                            id="sidebarClose"></button>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span class="icon-bg"><i
+                                        class="bi bi-rocket-takeoff"></i></span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="icon-bg"><i
+                                        class="bi bi-table"></i></span>
+                                Table
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="icon-bg"><i
+                                        class="bi bi-credit-card"></i></span>
+                                Billing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="icon-bg"><i
+                                        class="bi bi-share"></i></span>
+                                Social Media
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="icon-bg"><i
+                                        class="bi bi-file-earmark-text"></i></span>
+                                Form
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="content">
+                    <div class="dashboard-sections">
+                        <div class="sections-row">
+                            <!-- Performance Section -->
+                            <section class="content-section section-col">
+                                <div class="section-header1">
+                                    <h2 class="section-title">Performance</h2>
+                                    <div class="week-filter">
+                                        This Week <i
+                                            class="bi bi-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="performance-grid">
+                                    <div class="performance-card">
+                                        <div class="card-body">
+                                            <h3>User</h3>
+                                            <p class="value">+42%</p>
+                                            <span
+                                                class="change positive">1232</span>
+                                            <img
+                                                src="https://c.animaapp.com/ma10bv2aqlCIPs/img/line-chart-2.svg"
+                                                alt="Chart" class="chart">
+                                        </div>
+                                    </div>
+                                    <div class="performance-card">
+                                        <div class="card-body">
+                                            <h3>Subscription</h3>
+                                            <p class="value">+40%</p>
+                                            <span
+                                                class="change positive">1232</span>
+                                            <img
+                                                src="https://c.animaapp.com/ma10bv2aqlCIPs/img/line-chart-3.svg"
+                                                alt="Chart" class="chart">
+                                        </div>
+                                    </div>
+                                    <div class="performance-card">
+                                        <div class="card-body">
+                                            <h3>Revenue</h3>
+                                            <p class="value">$ 42k</p>
+                                            <span class="change negative">4k
+                                                $</span>
+                                            <img
+                                                src="https://c.animaapp.com/ma10bv2aqlCIPs/img/line-chart-3.svg"
+                                                alt="Chart" class="chart">
+                                        </div>
+                                    </div>
+                                    <div class="performance-card">
+                                        <div class="card-body">
+                                            <h3>Payment</h3>
+                                            <p class="value">+70%</p>
+                                            <span
+                                                class="change positive">1232</span>
+                                            <img
+                                                src="https://c.animaapp.com/ma10bv2aqlCIPs/img/line-chart-3.svg"
+                                                alt="Chart" class="chart">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Social Platform Section -->
+                            <section class="content-section section-col">
+                                <div class="section-header">
+                                    <h2 class="section-title">Social
+                                        Platform</h2>
+                                    <div class="d-flex align-items-center">
+                                        <span class="count-badge">5</span>
+                                        <span
+                                            style="color: #BABABA; font-size: 12px; font-weight: 600;">Platform
+                                            are here!</span>
+                                    </div>
+                                </div>
+                                <div class="platform-container">
+                                    <div class="platform-card">
+                                        <svg width="41" height="40"
+                                            viewBox="0 0 41 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20.5 40C31.5457 40 40.5 31.0457 40.5 20C40.5 8.95431 31.5457 0 20.5 0C9.45431 0 0.5 8.95431 0.5 20C0.5 31.0457 9.45431 40 20.5 40Z"
+                                                fill="url(#paint0_linear_0_191)" />
+                                            <path
+                                                d="M27.9482 26.1166L28.8366 20.4716H23.2789V16.81C23.2789 15.2653 24.0539 13.7587 26.5432 13.7587H29.0714V8.95286C29.0714 8.95286 26.7779 8.57144 24.5862 8.57144C20.0069 8.57144 17.0167 11.2756 17.0167 16.1692V20.4716H11.9286V26.1166H17.0167V39.7636C18.0382 39.92 19.0832 40 20.1477 40C21.2123 40 22.2574 39.92 23.2789 39.7636V26.1166H27.9482Z"
+                                                fill="white" />
+                                            <defs>
+                                                <lineargradient
+                                                    id="paint0_linear_0_191"
+                                                    x1="20.5" y1="0" x2="20.5"
+                                                    y2="39.8814"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop
+                                                        stop-color="#18ACFE" />
+                                                    <stop offset="1"
+                                                        stop-color="#0163E0" />
+                                                </lineargradient>
+                                            </defs>
+                                        </svg>
+
+                                        <p>Facebook</p>
+                                    </div>
+                                    <div class="platform-card">
+                                        <img
+                                            src="https://c.animaapp.com/ma10bv2aqlCIPs/img/instagram-svgrepo-com-1.svg"
+                                            alt="Instagram"
+                                            class="platform-icon">
+                                        <p>Instagram</p>
+                                    </div>
+                                    <div class="platform-card">
+                                        <img
+                                            src="https://c.animaapp.com/ma10bv2aqlCIPs/img/youtube-svgrepo-com-1.svg"
+                                            alt="Youtube" class="platform-icon">
+                                        <p>Youtube</p>
+                                    </div>
+                                    <div class="platform-card">
+                                        <img
+                                            src="https://c.animaapp.com/ma10bv2aqlCIPs/img/group-1.png"
+                                            alt="Vimeo" class="platform-icon">
+                                        <p>Vimeo</p>
+                                    </div>
+                                    <div class="platform-card">
+                                        <img
+                                            src="https://c.animaapp.com/ma10bv2aqlCIPs/img/tiktok-svgrepo-com-1.svg"
+                                            alt="Tiktok" class="platform-icon">
+                                        <p>Tiktok</p>
+                                    </div>
+                                    <div class="platform-card add-platform">
+                                        <svg width="35" height="36"
+                                            viewBox="0 0 35 36" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.75 16.75H25V19.25H18.75V25.5H16.25V19.25H10V16.75H16.25V10.5H18.75V16.75ZM17.5 0.5C19.1146 0.5 20.6641 0.708333 22.1484 1.125C23.6328 1.54167 25.026 2.1276 26.3281 2.88281C27.6302 3.63802 28.8086 4.54948 29.8633 5.61719C30.918 6.6849 31.8294 7.86328 32.5977 9.15234C33.3659 10.4414 33.9583 11.8346 34.375 13.332C34.7917 14.8294 35 16.3854 35 18C35 19.6146 34.7917 21.1641 34.375 22.6484C33.9583 24.1328 33.3724 25.526 32.6172 26.8281C31.862 28.1302 30.9505 29.3086 29.8828 30.3633C28.8151 31.418 27.6367 32.3294 26.3477 33.0977C25.0586 33.8659 23.6654 34.4583 22.168 34.875C20.6706 35.2917 19.1146 35.5 17.5 35.5C15.8854 35.5 14.3359 35.2917 12.8516 34.875C11.3672 34.4583 9.97396 33.8724 8.67188 33.1172C7.36979 32.362 6.19141 31.4505 5.13672 30.3828C4.08203 29.3151 3.17057 28.1367 2.40234 26.8477C1.63411 25.5586 1.04167 24.1654 0.625 22.668C0.208333 21.1706 0 19.6146 0 18C0 16.3854 0.208333 14.8359 0.625 13.3516C1.04167 11.8672 1.6276 10.474 2.38281 9.17188C3.13802 7.86979 4.04948 6.69141 5.11719 5.63672C6.1849 4.58203 7.36328 3.67057 8.65234 2.90234C9.94141 2.13411 11.3346 1.54167 12.832 1.125C14.3294 0.708333 15.8854 0.5 17.5 0.5ZM17.5 33C18.8802 33 20.2083 32.8242 21.4844 32.4727C22.7604 32.1211 23.9518 31.6133 25.0586 30.9492C26.1654 30.2852 27.181 29.5039 28.1055 28.6055C29.0299 27.707 29.8112 26.6979 30.4492 25.5781C31.0872 24.4583 31.5885 23.2604 31.9531 21.9844C32.3177 20.7083 32.5 19.3802 32.5 18C32.5 16.6198 32.3242 15.2917 31.9727 14.0156C31.6211 12.7396 31.1133 11.5482 30.4492 10.4414C29.7852 9.33464 29.0039 8.31901 28.1055 7.39453C27.207 6.47005 26.1979 5.6888 25.0781 5.05078C23.9583 4.41276 22.7604 3.91146 21.4844 3.54688C20.2083 3.18229 18.8802 3 17.5 3C16.1198 3 14.7917 3.17578 13.5156 3.52734C12.2396 3.87891 11.0482 4.38672 9.94141 5.05078C8.83464 5.71484 7.81901 6.49609 6.89453 7.39453C5.97005 8.29297 5.1888 9.30208 4.55078 10.4219C3.91276 11.5417 3.41146 12.7396 3.04688 14.0156C2.68229 15.2917 2.5 16.6198 2.5 18C2.5 19.3802 2.67578 20.7083 3.02734 21.9844C3.37891 23.2604 3.88672 24.4518 4.55078 25.5586C5.21484 26.6654 5.99609 27.681 6.89453 28.6055C7.79297 29.5299 8.80208 30.3112 9.92188 30.9492C11.0417 31.5872 12.2396 32.0885 13.5156 32.4531C14.7917 32.8177 16.1198 33 17.5 33Z"
+                                                fill="#A7B6FF" />
+                                        </svg>
+
+                                        <p>Add Platform</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- Membership Section -->
+                        <section class="content-section mb-4">
+                            <div class="section-header">
+                                <h2 class="section-title">Membership</h2>
+                                <div class="d-flex align-items-center gap-1">
+                                    <i
+                                        class="bi bi-check-circle-fill text-success me-1"
+                                        style="font-size: 15px;"></i>
+                                    <span class="section-subtitle"
+                                        style="margin-bottom: 0;">30 done this
+                                        month</span>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="membership-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#No</th>
+                                            <th scope="col">ID Number</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Phone Number</th>
+                                            <th scope="col">Email Address</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Subscription</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#ydd725</td>
+                                            <td>MD Karim</td>
+                                            <td>01781-234567</td>
+                                            <td>mdkarim@gmail.com</td>
+                                            <td>20 Jun, 2024</td>
+                                            <td><span>Premium</span></td>
+                                            <td>
+                                                <div class="action-icons">
+                                                    <i
+                                                        class="bi bi-trash-fill red-icon"></i>
+                                                    <svg width="23" height="20"
+                                                        viewBox="0 0 23 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2.09091 0C0.930454 0 0 0.936842 0 2.10526V14.7368C0 15.2952 0.220292 15.8307 0.612413 16.2255C1.00453 16.6203 1.53637 16.8421 2.09091 16.8421H13.0682C12.7231 16.0083 12.5455 15.1139 12.5455 14.2105C12.5455 12.3959 13.2614 10.6556 14.5358 9.37243C15.8102 8.08928 17.5386 7.36842 19.3409 7.36842C19.8692 7.36999 20.3955 7.43358 20.9091 7.5579V2.10526C20.9091 1.54691 20.6888 1.01143 20.2967 0.616617C19.9046 0.221804 19.3727 0 18.8182 0H2.09091ZM2.09091 2.10526L10.4545 7.36842L18.8182 2.10526V4.21053L10.4545 9.47368L2.09091 4.21053V2.10526ZM18.8182 8.42105L16.4659 10.7895L18.8182 13.1579V11.5789C19.5114 11.5789 20.1761 11.8562 20.6663 12.3497C21.1565 12.8432 21.4318 13.5126 21.4318 14.2105C21.4318 14.6316 21.3377 15.0316 21.16 15.3895L22.2995 16.5368C22.7386 15.8737 23 15.0737 23 14.2105C23 11.8842 21.1286 10 18.8182 10V8.42105ZM15.3368 11.8842C14.8977 12.5474 14.6364 13.3474 14.6364 14.2105C14.6364 16.5368 16.5077 18.4211 18.8182 18.4211V20L21.1705 17.6316L18.8182 15.2632V16.8421C18.125 16.8421 17.4602 16.5649 16.9701 16.0713C16.4799 15.5778 16.2045 14.9085 16.2045 14.2105C16.2045 13.7895 16.2986 13.3895 16.4764 13.0316L15.3368 11.8842Z"
+                                                            fill="#13BF69" />
+                                                    </svg>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#ydd725</td>
+                                            <td>MD Karim</td>
+                                            <td>01781-234567</td>
+                                            <td>mdkarim@gmail.com</td>
+                                            <td>20 Jun, 2024</td>
+                                            <td><span>Premium</span></td>
+                                            <td>
+                                                <div class="action-icons">
+                                                    <i
+                                                        class="bi bi-trash-fill red-icon"></i>
+                                                    <svg width="23" height="20"
+                                                        viewBox="0 0 23 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2.09091 0C0.930454 0 0 0.936842 0 2.10526V14.7368C0 15.2952 0.220292 15.8307 0.612413 16.2255C1.00453 16.6203 1.53637 16.8421 2.09091 16.8421H13.0682C12.7231 16.0083 12.5455 15.1139 12.5455 14.2105C12.5455 12.3959 13.2614 10.6556 14.5358 9.37243C15.8102 8.08928 17.5386 7.36842 19.3409 7.36842C19.8692 7.36999 20.3955 7.43358 20.9091 7.5579V2.10526C20.9091 1.54691 20.6888 1.01143 20.2967 0.616617C19.9046 0.221804 19.3727 0 18.8182 0H2.09091ZM2.09091 2.10526L10.4545 7.36842L18.8182 2.10526V4.21053L10.4545 9.47368L2.09091 4.21053V2.10526ZM18.8182 8.42105L16.4659 10.7895L18.8182 13.1579V11.5789C19.5114 11.5789 20.1761 11.8562 20.6663 12.3497C21.1565 12.8432 21.4318 13.5126 21.4318 14.2105C21.4318 14.6316 21.3377 15.0316 21.16 15.3895L22.2995 16.5368C22.7386 15.8737 23 15.0737 23 14.2105C23 11.8842 21.1286 10 18.8182 10V8.42105ZM15.3368 11.8842C14.8977 12.5474 14.6364 13.3474 14.6364 14.2105C14.6364 16.5368 16.5077 18.4211 18.8182 18.4211V20L21.1705 17.6316L18.8182 15.2632V16.8421C18.125 16.8421 17.4602 16.5649 16.9701 16.0713C16.4799 15.5778 16.2045 14.9085 16.2045 14.2105C16.2045 13.7895 16.2986 13.3895 16.4764 13.0316L15.3368 11.8842Z"
+                                                            fill="#13BF69" />
+                                                    </svg>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#ydd725</td>
+                                            <td>MD Karim</td>
+                                            <td>01781-234567</td>
+                                            <td>mdkarim@gmail.com</td>
+                                            <td>20 Jun, 2024</td>
+                                            <td><span>Premium</span></td>
+                                            <td>
+                                                <div class="action-icons">
+                                                    <i
+                                                        class="bi bi-trash-fill red-icon"></i>
+                                                    <svg width="23" height="20"
+                                                        viewBox="0 0 23 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2.09091 0C0.930454 0 0 0.936842 0 2.10526V14.7368C0 15.2952 0.220292 15.8307 0.612413 16.2255C1.00453 16.6203 1.53637 16.8421 2.09091 16.8421H13.0682C12.7231 16.0083 12.5455 15.1139 12.5455 14.2105C12.5455 12.3959 13.2614 10.6556 14.5358 9.37243C15.8102 8.08928 17.5386 7.36842 19.3409 7.36842C19.8692 7.36999 20.3955 7.43358 20.9091 7.5579V2.10526C20.9091 1.54691 20.6888 1.01143 20.2967 0.616617C19.9046 0.221804 19.3727 0 18.8182 0H2.09091ZM2.09091 2.10526L10.4545 7.36842L18.8182 2.10526V4.21053L10.4545 9.47368L2.09091 4.21053V2.10526ZM18.8182 8.42105L16.4659 10.7895L18.8182 13.1579V11.5789C19.5114 11.5789 20.1761 11.8562 20.6663 12.3497C21.1565 12.8432 21.4318 13.5126 21.4318 14.2105C21.4318 14.6316 21.3377 15.0316 21.16 15.3895L22.2995 16.5368C22.7386 15.8737 23 15.0737 23 14.2105C23 11.8842 21.1286 10 18.8182 10V8.42105ZM15.3368 11.8842C14.8977 12.5474 14.6364 13.3474 14.6364 14.2105C14.6364 16.5368 16.5077 18.4211 18.8182 18.4211V20L21.1705 17.6316L18.8182 15.2632V16.8421C18.125 16.8421 17.4602 16.5649 16.9701 16.0713C16.4799 15.5778 16.2045 14.9085 16.2045 14.2105C16.2045 13.7895 16.2986 13.3895 16.4764 13.0316L15.3368 11.8842Z"
+                                                            fill="#13BF69" />
+                                                    </svg>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#ydd725</td>
+                                            <td>MD Karim</td>
+                                            <td>01781-234567</td>
+                                            <td>mdkarim@gmail.com</td>
+                                            <td>20 Jun, 2024</td>
+                                            <td><span>Premium</span></td>
+                                            <td>
+                                                <div class="action-icons">
+                                                    <i
+                                                        class="bi bi-trash-fill red-icon"></i>
+                                                    <svg width="23" height="20"
+                                                        viewBox="0 0 23 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2.09091 0C0.930454 0 0 0.936842 0 2.10526V14.7368C0 15.2952 0.220292 15.8307 0.612413 16.2255C1.00453 16.6203 1.53637 16.8421 2.09091 16.8421H13.0682C12.7231 16.0083 12.5455 15.1139 12.5455 14.2105C12.5455 12.3959 13.2614 10.6556 14.5358 9.37243C15.8102 8.08928 17.5386 7.36842 19.3409 7.36842C19.8692 7.36999 20.3955 7.43358 20.9091 7.5579V2.10526C20.9091 1.54691 20.6888 1.01143 20.2967 0.616617C19.9046 0.221804 19.3727 0 18.8182 0H2.09091ZM2.09091 2.10526L10.4545 7.36842L18.8182 2.10526V4.21053L10.4545 9.47368L2.09091 4.21053V2.10526ZM18.8182 8.42105L16.4659 10.7895L18.8182 13.1579V11.5789C19.5114 11.5789 20.1761 11.8562 20.6663 12.3497C21.1565 12.8432 21.4318 13.5126 21.4318 14.2105C21.4318 14.6316 21.3377 15.0316 21.16 15.3895L22.2995 16.5368C22.7386 15.8737 23 15.0737 23 14.2105C23 11.8842 21.1286 10 18.8182 10V8.42105ZM15.3368 11.8842C14.8977 12.5474 14.6364 13.3474 14.6364 14.2105C14.6364 16.5368 16.5077 18.4211 18.8182 18.4211V20L21.1705 17.6316L18.8182 15.2632V16.8421C18.125 16.8421 17.4602 16.5649 16.9701 16.0713C16.4799 15.5778 16.2045 14.9085 16.2045 14.2105C16.2045 13.7895 16.2986 13.3895 16.4764 13.0316L15.3368 11.8842Z"
+                                                            fill="#13BF69" />
+                                                    </svg>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#ydd725</td>
+                                            <td>MD Karim</td>
+                                            <td>01781-234567</td>
+                                            <td>mdkarim@gmail.com</td>
+                                            <td>20 Jun, 2024</td>
+                                            <td><span>Premium</span></td>
+                                            <td>
+                                                <div class="action-icons">
+                                                    <i
+                                                        class="bi bi-trash-fill red-icon"></i>
+                                                    <svg width="23" height="20"
+                                                        viewBox="0 0 23 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2.09091 0C0.930454 0 0 0.936842 0 2.10526V14.7368C0 15.2952 0.220292 15.8307 0.612413 16.2255C1.00453 16.6203 1.53637 16.8421 2.09091 16.8421H13.0682C12.7231 16.0083 12.5455 15.1139 12.5455 14.2105C12.5455 12.3959 13.2614 10.6556 14.5358 9.37243C15.8102 8.08928 17.5386 7.36842 19.3409 7.36842C19.8692 7.36999 20.3955 7.43358 20.9091 7.5579V2.10526C20.9091 1.54691 20.6888 1.01143 20.2967 0.616617C19.9046 0.221804 19.3727 0 18.8182 0H2.09091ZM2.09091 2.10526L10.4545 7.36842L18.8182 2.10526V4.21053L10.4545 9.47368L2.09091 4.21053V2.10526ZM18.8182 8.42105L16.4659 10.7895L18.8182 13.1579V11.5789C19.5114 11.5789 20.1761 11.8562 20.6663 12.3497C21.1565 12.8432 21.4318 13.5126 21.4318 14.2105C21.4318 14.6316 21.3377 15.0316 21.16 15.3895L22.2995 16.5368C22.7386 15.8737 23 15.0737 23 14.2105C23 11.8842 21.1286 10 18.8182 10V8.42105ZM15.3368 11.8842C14.8977 12.5474 14.6364 13.3474 14.6364 14.2105C14.6364 16.5368 16.5077 18.4211 18.8182 18.4211V20L21.1705 17.6316L18.8182 15.2632V16.8421C18.125 16.8421 17.4602 16.5649 16.9701 16.0713C16.4799 15.5778 16.2045 14.9085 16.2045 14.2105C16.2045 13.7895 16.2986 13.3895 16.4764 13.0316L15.3368 11.8842Z"
+                                                            fill="#13BF69" />
+                                                    </svg>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS bundle with Popper -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Custom script -->
+            <script src="script.js"></script>
+        </body>
+    </html>
